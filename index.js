@@ -49,9 +49,7 @@ async function quoteImport(filename){
 		let QuoteSpeaker = (workingString.split("\" "));
 		QuoteSpeaker[0] = QuoteSpeaker[0] + "\"";
 		QuoteSpeakerArray.push(QuoteSpeaker);
-	//Make an array here with two elements (quote and speaker)
-	//Pop the array onto the end of another array (arraypog2)
-	//return arraypog2
+
 	}
 	
 	return QuoteSpeakerArray;
@@ -62,14 +60,9 @@ async function rngQuote(){
 		quotes = await quoteImport("./AquaQuotes.txt");
 	}
 	quote = await quotes
-	
+
 	const rngQuote = Math.floor(Math.random() * (quote.length)) + 1;
-	//randomint assigns random number to a variable
-	//the variable calls a quote in the quotes array
 
-	//replace html quote with said quote using dom 
-
-	//To replace html quotes its 
 	document.getElementById("quoteElement").innerHTML = quote[rngQuote][0];
 	document.getElementById("speakerElement").innerHTML = quote[rngQuote][1];
 }
