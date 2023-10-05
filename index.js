@@ -61,9 +61,9 @@ async function rngQuote(){
 	if(quotes == null){
 		quotes = await quoteImport("./AquaQuotes.txt");
 	}
-	let quote = await quotes
+	quote = await quotes
 	
-	const rngQuote = Math.floor(Math.random() * (quotes.length)) + 1;
+	const rngQuote = Math.floor(Math.random() * (quote.length)) + 1;
 	//randomint assigns random number to a variable
 	//the variable calls a quote in the quotes array
 
