@@ -29,8 +29,9 @@ function quoteImport(filename){
 	//contributed by zenonnnn pog
 	let massivestring = fetch(new Request(filename)).then(result => console.log(result.text()));
 
+	let fileLines = massivestring.split("\r\n");
 
-	console.log(massivestring);
+	console.log(fileLines.length);
 	//decode that 
 	
 	//Import the file
