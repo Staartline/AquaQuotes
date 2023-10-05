@@ -9,7 +9,7 @@
 
 let quotes = [];
 
-quotes = quoteImport("..\AquaQuotes.txt");
+quotes = quoteImport("./AquaQuotes.txt");
 
 //Array that holds quotes
 //delimiter is "#. "
