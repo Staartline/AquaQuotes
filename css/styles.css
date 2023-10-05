@@ -1,0 +1,48 @@
+
+
+
+
+:root{
+	--PogquaRed: #b90d38;
+	--PogquaTeal: #01c7b9;
+	--PogquaGrey: #2a3137;
+	--PogquaWhite: #ffffff;
+	--PogquaBlack: black;
+}
+
+body{
+	background-color:var(--PogquaTeal);
+	text-align: center;
+
+}
+
+.section h1{
+	color:var(--PogquaWhite);
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 25% 75%;
+}
+
+img{
+	min-width: 50%;
+}
+
+/*Put these on the same line later*/
+.triangle{
+	width: 0; 
+  	height: 0; 
+  	border-top: 10px solid transparent;
+  	border-bottom: 10px solid transparent; 
+  
+  	border-right:10px solid blue; 
+}
+.speechbubble{
+	background-color: var(--PogquaWhite); 
+	border-radius: 50%;
+
+	min-height: ;
+	min-width: ;
+
+}
