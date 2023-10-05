@@ -45,25 +45,19 @@ async function quoteImport(filename){
 	//for loop here that repeats for all the lines in the quotes line
 	//For line in file put it as one string that then gets parsed. So we can 
 	//parse the line on a /n character
-	for (let i = 0; i < fileLines.length; i++) {
-		let QuoteSpeaker = [];
+	for(let i = 0; i < fileLines.length; i++) {
+
 		
 		let workingString = fileLines[i];
 
-		QuoteSpeaker.push(workingString.split("\" "));
+		let QuoteSpeaker = (workingString.split("\" "));
 		QuoteSpeakerArray.push(QuoteSpeaker);
-
-
 	//Make an array here with two elements (quote and speaker)
 	//Pop the array onto the end of another array (arraypog2)
 	//return arraypog2
 	}
-
 	
-
-
-	
-	return
+	return QuoteSpeakerArray;
 }
 
 
