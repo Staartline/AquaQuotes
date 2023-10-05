@@ -49,9 +49,6 @@ async function rngQuote(){
 	//the variable calls a quote in the quotes array
 	//replace html quote with said quote using dom 
 	//To replace html quotes its 
-	document.getElementById("quoteElement").innerHTML = 
-	quote[rngQuote][0];
-	console.log(quotes[rngQuote]);
-	document.getElementById("speakerElement").innerHTML = 
-	quote[rngQuote][1];
+	document.getElementById("quoteElement").innerHTML = quote[rngQuote][0];
+	document.getElementById("speakerElement").innerHTML = quote[rngQuote][1];
 }
