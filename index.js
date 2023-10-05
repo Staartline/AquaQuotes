@@ -8,7 +8,6 @@
 
 
 let quotes = [];
-
 quotes = quoteImport("./AquaQuotes.txt");
 
 
@@ -59,8 +58,8 @@ async function quoteImport(filename){
 }
 
 function rngQuote(){
-	const quoteElement = document.getElementById("quoteElement");
-	const speakerElement = document.getElementbyId("speakerElement");
+	const qe = document.getElementById("quoteElement");
+	const se = document.getElementById("speakerElement");
 	
 	const randomQuote = Math.floor(Math.random() * (quote.length + 1));
 	//randomint assigns random number to a variable
@@ -69,6 +68,6 @@ function rngQuote(){
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	quoteElement.innerHTML = quote[randomQuote[0]];
-	speakerElement.innerHTML = quote[randomQuote[1]];
+	qe.innerHTML = quote[randomQuote[0]];
+	se.innerHTML = quote[randomQuote[1]];
 }
