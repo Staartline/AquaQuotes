@@ -7,8 +7,8 @@
 
 
 
-let quotes = [];
-quotes = quoteImport("./AquaQuotes.txt");
+// let quotes = [];
+// quotes = quoteImport("./AquaQuotes.txt");
 
 
 //Array that holds quotes
@@ -63,13 +63,13 @@ function rngQuote(){
 		quotes = quoteImport("./AquaQuotes.txt");
 	}
 	
-	const randomQuote = Math.floor(Math.random() * (quotes.length + 1));
+	const rngQuote = Math.floor(Math.random() * (quotes.length + 1));
 	//randomint assigns random number to a variable
 	//the variable calls a quote in the quotes array
 
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	document.getElementById("quoteElement").innerHTML = quotes[randomQuote[0]];
-	document.getElementById("speakerElement").innerHTML = quotes[randomQuote[1]];
+	document.getElementById("quoteElement").innerHTML = quotes[rngQuote[0]];
+	document.getElementById("speakerElement").innerHTML = quotes[rngQuote[1]];
 }
