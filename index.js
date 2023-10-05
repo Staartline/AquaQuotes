@@ -20,14 +20,14 @@ quotes = quoteImport("./AquaQuotes.txt");
 //So we wanna read in the file
 //add it to an array
 
-
-function quoteImport(filename){
+//fetch, async, await 
+async function quoteImport(filename){
 
 	//empty array to hold all arrays of quote, speake
 	let QuoteSpeakerArray = [];
 
 	//contributed by zenonnnn pog
-	let massivestring = fetch(new Request(filename)).then(result => console.log(result.text()));
+	let massivestring = await fetch(new Request(filename)).then(result => result.text());
 
 	let fileLines = massivestring.split("\r\n");
 
