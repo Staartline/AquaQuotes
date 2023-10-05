@@ -31,10 +31,9 @@ async function quoteImport(filename){
 
 	let fileLines = massivestring.split("\r\n");
 
-	console.log(fileLines.length);
-	//decode that 
+	// console.log(fileLines.length);
 	
-	//Import the file
+	//Import the file 
 	//take the text
 	//break it on a newline (or the delimiter of like, #. ) into like a list 
 	//list or something 
@@ -46,13 +45,12 @@ async function quoteImport(filename){
 	//for loop here that repeats for all the lines in the quotes line
 	//For line in file put it as one string that then gets parsed. So we can 
 	//parse the line on a /n character
-	for (let i = 0; i < parsable.length; i++) {
+	for (let i = 0; i < fileLines.length; i++) {
 		let QuoteSpeaker = [];
-		//parse parsable. 
+		
+		let workingString = fileLines[i];
 
-
-		QuoteSpeaker.push();
-		QuoteSpeaker.push();
+		QuoteSpeaker.push(workingString.split("\" "));
 		QuoteSpeakerArray.push(QuoteSpeaker);
 
 
