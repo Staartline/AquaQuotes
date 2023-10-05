@@ -69,6 +69,9 @@ function rngQuote(){
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	document.getElementById("quoteElement").innerHTML = quotes[rngQuote[0]];
-	document.getElementById("speakerElement").innerHTML = quotes[rngQuote[1]];
+	document.getElementById("quoteElement").innerHTML = 
+	quotes[rngQuote];
+	console.log(quotes[rngQuote]);
+	document.getElementById("speakerElement").innerHTML = 
+	quotes[rngQuote];
 }
