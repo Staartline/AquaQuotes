@@ -58,8 +58,6 @@ async function quoteImport(filename){
 }
 
 function rngQuote(){
-	const qe = document.getElementById("quoteElement");
-	const se = document.getElementById("speakerElement");
 	
 	const randomQuote = Math.floor(Math.random() * (quote.length + 1));
 	//randomint assigns random number to a variable
@@ -68,6 +66,6 @@ function rngQuote(){
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	qe.innerHTML = quote[randomQuote[0]];
-	se.innerHTML = quote[randomQuote[1]];
+	document.getElementById("quoteElement").innerHTML = quote[randomQuote[0]];
+	document.getElementById("speakerElement").innerHTML = quote[randomQuote[1]];
 }
