@@ -11,6 +11,7 @@ let quotes = [];
 
 quotes = quoteImport("./AquaQuotes.txt");
 
+
 //Array that holds quotes
 //delimiter is "#. "
 //arrays can hold multiple items. 2 strings ??? I might not do this
@@ -36,7 +37,6 @@ async function quoteImport(filename){
 	//Import the file 
 	//take the text
 	//break it on a newline (or the delimiter of like, #. ) into like a list 
-	//list or something 
 	//loop through the list breaking the quotes into two sections
 	//add those sections into a bigger array with part 1, part 2. 
 
@@ -46,10 +46,7 @@ async function quoteImport(filename){
 	//For line in file put it as one string that then gets parsed. So we can 
 	//parse the line on a /n character
 	for(let i = 0; i < fileLines.length; i++) {
-
-		
 		let workingString = fileLines[i];
-
 		let QuoteSpeaker = (workingString.split("\" "));
 		QuoteSpeakerArray.push(QuoteSpeaker);
 	//Make an array here with two elements (quote and speaker)
