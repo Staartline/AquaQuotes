@@ -19,30 +19,17 @@ quotes = quoteImport("..\AquaQuotes.txt");
 
 //So we wanna read in the file
 //add it to an array
-//
 
-//add a function
 
 function quoteImport(filename){
 
-	//Make an array here with two elements (quote and speaker)
-	//Pop the array onto the end of another array (arraypog2)
-	//return arraypog2
-
+	//empty array to hold all arrays of quote, speake
 	let QuoteSpeakerArray = [];
 
-	// let file = fetch(filename);
-
-	// let reader = new FileReader(file);
-
-	// let massivestring = reader.readAsText();
-
-	// console.log(massivestring);
-
-	// let parsable = massivestring.split("\n");
 	//contributed by zenonnnn pog
-	fetch(filename).then(result => console.log(result.text()));
+	let massivestring = fetch(new Request(filename)).then(result => console.log(result.text()));
 
+	
 	//Import the file
 	//take the text
 	//break it on a newline (or the delimiter of like, #. ) into like a list 
@@ -58,9 +45,16 @@ function quoteImport(filename){
 	for (let i = 0; i < parsable.length; i++) {
 		let QuoteSpeaker = [];
 		//parse parsable. 
+
+
 		QuoteSpeaker.push();
 		QuoteSpeaker.push();
 		QuoteSpeakerArray.push(QuoteSpeaker);
+
+
+	//Make an array here with two elements (quote and speaker)
+	//Pop the array onto the end of another array (arraypog2)
+	//return arraypog2
 	}
 
 	
