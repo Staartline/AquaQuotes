@@ -48,6 +48,7 @@ async function quoteImport(filename){
 	for(let i = 0; i < fileLines.length; i++) {
 		let workingString = fileLines[i];
 		let QuoteSpeaker = (workingString.split("\" "));
+		QuoteSpeaker[0] = QuoteSpeaker[0] + "\"";
 		QuoteSpeakerArray.push(QuoteSpeaker);
 	//Make an array here with two elements (quote and speaker)
 	//Pop the array onto the end of another array (arraypog2)
@@ -57,34 +58,17 @@ async function quoteImport(filename){
 	return QuoteSpeakerArray;
 }
 
-
-
-      function readFile(input) {
-        let file = input.files[0]; 
-        let fileReader = new FileReader(); 
-        fileReader.readAsText(file); 
-        fileReader.onload = function() {
-          alert(fileReader.result);
-        }; 
-        fileReader.onerror = function() {
-          alert(fileReader.error);
-        }; 
-      }
-
 function rngQuote(){
 	const quoteElement = document.getElementById("quoteElement");
 	const speakerElement = document.getElementbyId("speakerElement");
 	
+	const randomQuote = Math.floor(Math.random() * (quote.length + 1));
 	//randomint assigns random number to a variable
 	//the variable calls a quote in the quotes array
 
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	quoteElement.innerHTML = quote[index[1]];
-	speakerElement.innerHTML = quote[index[2]];
-
-
-
-
+	quoteElement.innerHTML = quote[randomQuote[0]];
+	speakerElement.innerHTML = quote[randomQuote[1]];
 }
