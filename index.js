@@ -29,6 +29,9 @@ function quoteImport(filename){
 	//contributed by zenonnnn pog
 	let massivestring = fetch(new Request(filename)).then(result => console.log(result.text()));
 
+
+	console.log(massivestring);
+	//decode that 
 	
 	//Import the file
 	//take the text

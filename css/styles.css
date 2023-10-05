@@ -13,11 +13,13 @@
 body{
 	background-color:var(--PogquaTeal);
 	text-align: center;
+	font-family: 'Oswald', sans-serif;
 
 }
 
 .section h1{
 	color:var(--PogquaWhite);
+	font-family: 'Rajdhani', sans-serif;
 }
 
 .grid{
