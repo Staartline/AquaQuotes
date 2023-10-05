@@ -7,8 +7,8 @@
 
 
 
-// let quotes = [];
-// quotes = quoteImport("./AquaQuotes.txt");
+let quotes = [];
+quotes = quoteImport("./AquaQuotes.txt");
 
 
 //Array that holds quotes
@@ -59,7 +59,6 @@ async function quoteImport(filename){
 
 function rngQuote(){
 	if(quotes == null){
-		let quotes = [];
 		quotes = quoteImport("./AquaQuotes.txt");
 	}
 	
