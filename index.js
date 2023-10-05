@@ -27,7 +27,7 @@ async function quoteImport(filename){
 	let QuoteSpeakerArray = [];
 
 	//contributed by zenonnnn pog
-	let massivestring = await fetch(new Request(filename)).then(result => result.text());
+	let massivestring = await fetch(new Request(filename)).then(await result => result.text());
 
 	let fileLines = massivestring.split("\r\n");
 
