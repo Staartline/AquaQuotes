@@ -58,6 +58,10 @@ async function quoteImport(filename){
 }
 
 function rngQuote(){
+	if(quotes == null){
+		let quotes = [];
+		quotes = quoteImport("./AquaQuotes.txt");
+	}
 	
 	const randomQuote = Math.floor(Math.random() * (quotes.length + 1));
 	//randomint assigns random number to a variable
