@@ -57,12 +57,12 @@ async function quoteImport(filename){
 	return QuoteSpeakerArray;
 }
 
-function rngQuote(){
+async function rngQuote(){
 	if(quotes == null){
-		quotes = quoteImport("./AquaQuotes.txt");
+		quotes = await quoteImport("./AquaQuotes.txt");
 	}
 	
-	const rngQuote = Math.floor(Math.random() * (quotes.length + 1));
+	const rngQuote = Math.floor(Math.random() * (quotes.length)) + 1;
 	//randomint assigns random number to a variable
 	//the variable calls a quote in the quotes array
 
