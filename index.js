@@ -61,6 +61,7 @@ async function rngQuote(){
 	if(quotes == null){
 		quotes = await quoteImport("./AquaQuotes.txt");
 	}
+	let quote = await quotes
 	
 	const rngQuote = Math.floor(Math.random() * (quotes.length)) + 1;
 	//randomint assigns random number to a variable
@@ -69,9 +70,6 @@ async function rngQuote(){
 	//replace html quote with said quote using dom 
 
 	//To replace html quotes its 
-	document.getElementById("quoteElement").innerHTML = 
-	quotes[rngQuote];
-	console.log(quotes[rngQuote]);
-	document.getElementById("speakerElement").innerHTML = 
-	quotes[rngQuote];
+	document.getElementById("quoteElement").innerHTML = quote[rngQuote][0];
+	document.getElementById("speakerElement").innerHTML = quote[rngQuote][1];
 }
