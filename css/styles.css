@@ -14,9 +14,14 @@ body{
 
 }
 
+.maincontent{
+	padding: 10px;
+}
+
 .section h1{
 	color:var(--PogquaWhite);
 	font-family: 'Rajdhani', sans-serif;
+	font-size: 3rem;
 }
 
 .grid{
@@ -24,21 +29,33 @@ body{
 	grid-template-columns: 25% 75%;
 }
 
-img{
+.imgbox > img{
 	min-width: 50%;
 }
 
 /*Put these on the same line later*/
-.triangle{
+.triangleside{
 	width: 0; 
   	height: 0; 
   	position: relative;
   	top: 20%;
-  	left: -8px;
+  	left: -6px;
   	border-top: 10px solid transparent;
   	border-bottom: 10px solid transparent; 
   	border-right:10px solid var(--PogquaWhite); 
 }
+.triangleup{
+	display: none;
+	width: 0; 
+  	height: 0; 
+  	position: relative;
+  	top: 0px;
+  	left: 50%;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid var(--PogquaWhite);
+}
+
 .speechbubble{
 	background-color: var(--PogquaWhite); 
 	border-radius: 50px;
@@ -47,11 +64,31 @@ img{
 
 	min-height: 100px;
 	min-width: 500px;
+	font-size: 1.25rem;
 }
 .speechbubbletxt{
 	padding: 20px;
 }
+
+button{
+	margin: 10px;
+	background-color: transparent;
+	font-size: 2rem;
+	border-radius: 35px;
+	border:solid 3px var(--PogquaRed);
+	color:var(--PogquaRed);
+}
+
+button:hover{
+		border:solid 3px var(--PogquaBlack);
+		color:var(--PogquaBlack);
+}
+
 footer{
+	border-top: 4px solid var(--PogquaRed);
+	position: absolute;
+	bottom: 0px;
+	min-width: 100%;
 	display:flex;
 	align-content: center;
 	justify-content: center;
@@ -59,22 +96,41 @@ footer{
 	color: var(--PogquaWhite);
 }
 
+.logo{
+	max-width: 70px;
+	max-height: auto;
+}
+
 footer ul{
 	list-style: none;
 }
 
+.footerheader{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
 footer ul a{
 	color: var(--PogquaWhite);
 }
-
+footer ul a:hover{
+	color: var(--PogquaRed);
+}
 @media(max-width:600px){
-	.triangle{
+	.triangleside{
 		display:none;
+	}
+	.triangleup{
+		display:block;
 	}
 	.grid{
 		display: inline;
 	}
 	.speechbubble{
 		min-width: 100%;
+	}
+	footer{
+		position: static;
 	}
 }
