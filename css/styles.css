@@ -1,7 +1,3 @@
-
-
-
-
 :root{
 	--PogquaRed: #b90d38;
 	--PogquaTeal: #01c7b9;
@@ -11,6 +7,7 @@
 }
 
 body{
+	margin: 0px;
 	background-color:var(--PogquaTeal);
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
@@ -35,16 +32,47 @@ img{
 .triangle{
 	width: 0; 
   	height: 0; 
+  	position: relative;
+  	top: 20%;
+  	left: -8px;
   	border-top: 10px solid transparent;
   	border-bottom: 10px solid transparent; 
-  
-  	border-right:10px solid blue; 
+  	border-right:10px solid var(--PogquaWhite); 
 }
 .speechbubble{
 	background-color: var(--PogquaWhite); 
-	border-radius: 50%;
+	border-radius: 50px;
 
-	min-height: ;
-	min-width: ;
+	position: relative;
 
+	min-height: 100px;
+	min-width: 500px;
+}
+
+footer{
+	display:flex;
+	align-content: center;
+	justify-content: center;
+	background-color: var(--PogquaBlack);
+	color: var(--PogquaWhite);
+}
+
+footer ul{
+	list-style: none;
+}
+
+footer ul a{
+	color: var(--PogquaWhite);
+}
+
+@media(max-width:600px){
+	.triangle{
+		display:none;
+	}
+	.grid{
+		display: inline;
+	}
+	.speechbubble{
+		min-width: 100%;
+	}
 }
