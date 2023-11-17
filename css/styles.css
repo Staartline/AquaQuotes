@@ -48,7 +48,9 @@ img{
 	min-height: 100px;
 	min-width: 500px;
 }
-
+.speechbubbletxt{
+	padding: 20px;
+}
 footer{
 	display:flex;
 	align-content: center;
